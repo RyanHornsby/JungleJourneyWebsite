@@ -1,0 +1,315 @@
+@font-face {
+    font-family: "Tropic Jungle"; /* Name to reference in your CSS */
+    src: url("Fonts/TropicJungle-5y8zZ.ttf") format("truetype"); /* Path to your font file */
+    font-weight: normal; /* Optional: Set weight */
+    font-style: normal;  /* Optional: Set style */
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    color:rgb(138, 68, 28);
+    font-size: 58px;
+    border-bottom: 0.5rem solid rgb(138, 68, 28);
+    padding-top: 1.5rem;
+    margin-bottom: 5px;
+    font-style: oblique;
+}
+
+/*For some reason this h2 sections alters the appearance of the box before it loads*/
+
+h2 {
+    font-size:28px;
+    /*I think the concept was if you put multiple fonts, it will work through them in that order until it finds one it can display*/
+    font-family: "Tropic Jungle", Monotype;
+    color: rgb(14, 102, 61);
+    margin-top: 5px;
+    margin-bottom: 15px;
+    }
+
+#ideaSeller {
+    font-size: 25px;
+    font-family:Gabriola, Kristen ITC;
+    color:rgba(39, 39, 27, 0.788);
+}
+
+body {
+    background-color: rgb(255, 235, 205);
+    margin: 0;  
+    height: 100vh;
+}
+
+
+/*These control the navigation panel up top*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5vh;
+    z-index: 1000;
+    padding: 10px 10px;
+    background-color: rgba(19, 87, 59, 0.95);
+    box-shadow: 0 2px 10px rgb(165, 106, 71)
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    padding: 14px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    padding-bottom: 5px;
+    color:rgb(165, 106, 71);
+    transition: color 0.5s, border-bottom 0.5s, font-size 0.5s;
+}
+
+nav a:hover {
+    color: rgb(94, 66, 51);
+    font-size: 30px;
+    border-bottom: 2px solid rgb(165, 106, 71);
+}
+
+/*These control the paragraph section*/
+.salesParagraph {
+    background-color:  rgba(236, 199, 143, 0.75);
+    box-shadow: 0 4px 15px;
+    max-width: 40vw;
+    margin: 20px auto 20px;
+    padding: 0px 25px 0px 25px;
+    border: 10px outset rgb(14, 102, 61);
+    border-radius: 15px;
+
+}
+
+.salesParagraph h2 {
+    display: inline-block;
+    border-bottom: 2px inset rgb(14, 102, 61);
+    letter-spacing: 4px;
+}
+
+.salesParagraph p {
+    line-height: 1.3;
+}
+
+
+/* Header styling */
+.header-internals {
+    position: relative;
+    background-color:  rgba(236, 199, 143, 0.9);
+    box-shadow: 0 4px 15px;
+    max-width: 40vw;
+    margin: 80px auto 20px;
+    padding: 10px 25px 10px 25px;
+    border: 10px outset rgb(14, 102, 61);
+    border-radius: 15px;
+    z-index: 1;    
+    animation-name: onLoadLower;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;    
+    animation-timing-function: ease-out;
+}
+
+.header-internals h1 {
+    padding-top: 0px;
+    margin-top: 5px;
+}
+
+.header-button {
+    margin-bottom: 10px;
+}
+
+.header-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    background-image: url("Images/JungleBackdrop.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 99.35vw;
+}
+
+.header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;    
+    animation-name: onLoadFade;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+button {
+    text-align: center;
+    color:rgb(94, 66, 51);
+    background-color: rgba(179, 159, 130, 0.411);
+    text-transform: uppercase;
+    position: relative;
+    border: none;
+    font-size: 18px;
+    transform: 0.2s;
+    background-color: 0.2s;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 3px solid transparent;
+}
+
+button:active {
+    transform: translate(3px);
+}
+
+button::after, button::after {
+    border-radius: 15px;
+}
+
+.shrink-border {
+    background-color: transparent;
+}
+
+.shrink-border:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color:rgb(56, 44, 37);
+}
+
+.shrink-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid rgb(14, 102, 61);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.shrink-border:hover::before {
+    animation-name: buttonWhoosh;
+    animation-duration: 0.7s;
+    cursor: pointer;
+}
+
+.shrink-border::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1.5px solid rgb(14, 102, 61);    
+    box-sizing: border-box;
+    opacity: 1;
+    z-index: -1;
+}
+
+/*These control the footer elements*/
+.footer-content {
+    bottom: 0;
+    background-color: rgb(19, 87, 59);
+    text-align: center;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    color:rgb(141, 91, 63);        
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.footer-content p {
+    margin: 0 auto;    
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer-content ul {
+    list-style: none;
+    display: flex;    
+    justify-content: center;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;    
+    font-weight: bold;    
+    padding-top: 2px;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+}
+
+.footer-content a {
+    position: relative;
+    padding: 5px;
+    text-decoration: none;    
+    color:rgb(141, 91, 63);
+}
+
+.footer-content a:hover {
+    color: rgb(94, 66, 51);
+}
+
+.footer-icons {
+    padding-top: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+
+
+/*Animations*/
+
+@keyframes onLoadFade {
+    0% {
+        background-color: rgba(0,0,0,0);
+    }
+    100% {
+        background-color: rgba(0,0,0,0.4);
+    }
+}
+
+@keyframes onLoadLower {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 40%;
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes buttonWhoosh {
+    0% {
+        border: 1.5px solid rgb(14, 102, 61);
+    }
+    50% {
+        transform: scaleX(1.15) scaleY(1.7);
+        opacity: 0;
+    }
+    99% {
+        transform: scaleX(1) scaleY(1);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
