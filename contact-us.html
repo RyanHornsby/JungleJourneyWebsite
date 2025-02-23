@@ -2,8 +2,13 @@
 <html>
 <head>
     <title>Jungle Journey - Contact Us</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta charset="UTF-8">
+        <meta name="description" content="Homepage For Joungle Journey holiday getaways">
+        <meta name="keywords" content="Jungle, Journey, Joungle Journey, Getaway, Holiday, Travel, Escape, Relaxing">
+        <meta name="author" content="Ryan Hornsby">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -12,13 +17,60 @@
     <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="tours.html">Tours</a></li>
+            <li id="extra"><a href="tours.html">Tours</a>
+                <div id="hidden">
+                    <div id="blankFiller">
+
+                    </div>
+                    <div class = "secondNav">
+                        <ul>
+                            <li id="secondNav1"><a href=#ideaSeller>Weekend Getaways</a></li>
+                            <li id="secondNav2"><a href=#ideaSeller>Week Getaways</a></li>
+                            <li id="secondNav3"><a href=#ideaSeller>Long-term Sojourn</a></li>
+                        </ul>
+                    </div>
+                </div>                
+            </li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact-us.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>Welcome to the Contact Us page!</h1>
+
+    <main class="contact-page">
+    <h1>Get in contact with us</h1>
+
+    <section class="form-section">
+        <form>
+            <label for="firstname">First name:</label>
+            <input type="text" id="firstname" name="firstname" value="" placeholder="David">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" value="" placeholder="De'veed">
+            <br><p></p>
+            <p id="question1">How did you find out about us?</p><br>
+            <label for="found1" class="howFound">Through an ad</label>
+            <input type="checkbox" id="found1" name="found1" value="Through an ad" class="howFound">
+            <label for="found2" class="howFound">Through family</label>
+            <input type="checkbox" id="found2" name="found2" value="Through family" class="howFound">
+            <label for="found3" class="howFound">Through a booking agency</label>
+            <input type="checkbox" id="found3" name="found3" value="Through a booking agency" class="howFound">
+            <label for="found4" class="howFound">Through searching online</label>
+            <input type="checkbox" id="found4" name="found4" value="Through searching online" class="howFound">
+            <label for="found5" class="howFound">Other</label>
+            <input type="checkbox" id="found5" name="found5" value="Other" class="howFound">
+            <br><p></p>
+            <label for="reason">What do you wish to contact us about?</label>
+            <select name="reason" id="reason">
+                <option value="Booking a tour">Booking a tour</option>
+                <option value="Questions about trips">Questions about trips</option>
+                <option value="Getting a refund">Getting a refund</option>
+            </select>
+            <div id="submitButton">
+                <input type="submit" value="Submit"> 
+            </div>           
+        </form>
+    </section>
+    </main>
 
      <!--Footer-->
 

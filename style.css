@@ -5,18 +5,22 @@
     font-style: normal;  /* Optional: Set style */
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: inline-block;
     color:rgb(138, 68, 28);
     font-size: 58px;
     border-bottom: 0.5rem solid rgb(138, 68, 28);
-    padding-top: 1.5rem;
+    padding-top: 5vh;
     margin-bottom: 5px;
     font-style: oblique;
 }
 
-/*For some reason this h2 sections alters the appearance of the box before it loads*/
+/*For some reason this h2 sections alters the appearance of the box before it loads - it's because the custom font doesn't load in in time and it defaults to number two*/
 
 h2 {
     font-size:28px;
@@ -35,32 +39,37 @@ h2 {
 
 body {
     background-color: rgb(255, 235, 205);
-    margin: 0;  
-    height: 100vh;
+    margin: 0;      
+    text-align: center;
+}
+main {
+    min-height: calc(100vh - 129px);
 }
 
 
 /*These control the navigation panel up top*/
 nav {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
-    height: 2.5vh;
+    height: 5vh;
     z-index: 1000;
     padding: 10px 10px;
     background-color: rgba(19, 87, 59, 0.95);
-    box-shadow: 0 2px 10px rgb(165, 106, 71)
+    box-shadow: 0 2px 10px rgb(165, 106, 71);
 }
 
 nav ul {
+    position: relative;
     list-style: none;
     display: flex;
-    opacity: 0;
     padding: 0;
     margin: 0;
     justify-content: center;
-    align-items: center;
 }
 
 nav a {
@@ -85,12 +94,11 @@ nav a:hover {
 .salesParagraph {
     background-color:  rgba(236, 199, 143, 0.75);
     box-shadow: 0 4px 15px;
-    max-width: 40vw;
+    max-width: 60vw;
     margin: 20px auto 20px;
     padding: 0px 25px 0px 25px;
     border: 10px outset rgb(14, 102, 61);
     border-radius: 15px;
-
 }
 
 .salesParagraph h2 {
@@ -142,7 +150,7 @@ nav a:hover {
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 99.35vw;
+    width: 100%;
 }
 
 .header-section::before {
@@ -226,7 +234,7 @@ button::after, button::after {
 
 /*These control the footer elements*/
 .footer-content {
-    bottom: 0;
+    position: relative;
     background-color: rgb(19, 87, 59);
     text-align: center;
     justify-content: center;
@@ -274,7 +282,436 @@ button::after, button::after {
     font-size: 25px;
 }
 
+/* These control the gallery page*/
+.gallery-container {
+    width: 75vw;    
+    margin: 20px auto;
+}
 
+.gallery-container h2 {
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+#galleryImages {
+    border: 10px solid rgba(236, 199, 143, 0.75);
+    border-radius: 15px;
+    background-color: rgba(236, 199, 143, 0.75);
+    box-shadow: 0 2px 10px rgb(165, 106, 71);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+#galleryImages img {
+    position: relative;
+    max-width: 25vw;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px #fff;
+    border: 2px solid rgb(61, 94, 66);
+    border-radius: 5px;
+}
+
+#galleryImages figcaption {
+    width: 100%;
+    position: absolute;
+    bottom: 6px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.788);
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px 5px;
+    box-sizing: border-box;
+    border-radius: 0 0 5px 5px;;
+}
+
+figure {
+    margin: 10px;
+    padding: 0px;
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+}
+
+/*This controls the contact us section*/
+
+.form-section form {
+    padding: 20px;
+    border: 10px solid rgba(236, 199, 143, 0.75);
+    border-radius: 15px;
+    background-color: rgba(236, 199, 143, 0.75);
+    box-shadow: 0 2px 10px rgb(165, 106, 71);
+    width: fit-content;
+    margin: 15px auto;    
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+}
+
+#question1 {
+    text-align: right;
+    margin: 0;
+    padding: 10px 0 6px 0;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.form-section input, select {
+    justify-self: start;
+    margin-left: 5px;
+    margin-top: 2px;
+    border-radius: 3px;
+    max-width: 100%;
+    border: 1px solid black;
+}
+
+.form-section label {
+    text-align: right;
+    margin-right: 5px;
+    padding: 2px 0;
+}
+
+#submitButton {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*This controls the trip booking page*/
+
+table {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    border: 4px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: #fffdfd;
+    border-collapse: collapse;
+}
+
+table th {
+    min-width: 80px;
+    background-color: #d8d8d8;
+    height: 30px;
+}
+
+table tr {
+    margin: 0;
+    border: 0;
+}
+
+table td {
+    padding: 15px 25px;
+    border: 1px dotted #d8d8d8;
+    margin: 0;
+}
+
+table td:hover {
+    animation: xPulse 1s;
+    animation-iteration-count: infinite;
+}
+
+.booked {
+    background-image: url("Images/X.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: 75% 100%;
+    background-position: center;
+    cursor: not-allowed;
+}
+
+.topTableRow {
+    border-top: 0;
+}
+
+.bottomTableRow {
+    border-bottom: 0;
+}
+
+.leftTableColumn {
+    border-left: 0;
+}
+
+.rightTableColumn {
+    border-right: 0;
+}
+
+.noDate {
+    border: 0;
+}
+
+.calendarInput input {
+    margin: 0 20px;
+}
+
+/*About Us styling*/
+
+.about-page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    margin-top: 63.547px;
+    padding-top: 5vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.about1, .about2, .about3 {
+    width: 33%;
+}
+
+.about1 img, .about3 img {
+    border-radius: 65%;
+    box-shadow: 0 2px 10px rgb(165, 106, 71);
+}
+
+.about1 p {
+    margin-bottom: 0px;
+}
+
+.quotes {
+    background-color:  rgba(236, 199, 143, 0.75);
+    box-shadow: 0 4px 15px;
+    border: 10px outset rgb(14, 102, 61);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.banner {
+    width: 100%;
+    height: fit-content;
+    align-self: flex-start;
+    background-color:  rgba(236, 199, 143, 0.75);
+    padding: 20px;
+    opacity: 0;
+    animation: banner-appear 1.5s ease-out 6s forwards;
+}
+
+#hidden {
+    position: absolute;
+    top: 130%;
+    left: 14%;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transition: visibility 0.3s;
+    border-radius: 0 15px 0 15px;
+    box-shadow: 0 2px 10px rgb(165, 106, 71);
+}
+
+#extra:hover #hidden {
+    display: grid;
+    visibility: visible;
+    width: 30%;
+    height: 600%;
+    background-color: rgba(19, 107, 70, 0.95);
+    transition-delay: 1s;
+}
+
+#blankFiller {
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: transparent;
+}
+
+.secondNav {    
+    overflow: hidden;
+}
+
+.secondNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Makes sure it stretches */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.secondNav a {    
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2vh;
+}
+
+.secondNav li {
+    margin: 0;
+    padding: 0;
+}
+
+#secondNav2 {
+    background-color: rgba(31, 114, 79, 0.8);
+    padding: 15% 0;
+}
+
+.secondNav a:hover {
+    text-align: center;
+    font-size: 1.2vh;
+}
+
+
+
+/*Making the site mobile friendly*/
+@media screen and (max-width: 600px) {
+    h1 {
+        padding-top: 5vh;
+        font-size: 2.3vh;
+        border-bottom: 0.25rem solid rgb(138, 68, 28);
+    }
+
+    h2 {
+        font-size: 2vh;
+    }
+
+    .header-section {
+        width: 100vw;
+    }
+
+    .header-internals {
+        max-width: 90vw;
+    }
+
+    .header-internals h2 {
+        font-size: 1.5vh;
+    }
+
+    .salesParagraph {
+        max-width: 90vw;
+    }
+
+    .salesParagraph h2 {
+        padding-top: 1vh;
+        font-size: 1.6vh;
+    }
+
+    #ideaSeller {
+        margin-top: 0;
+        font-size: 1.8vh;
+    }
+
+    .gallery-container {
+        width: 90vw;
+    }
+
+    #galleryImages {
+        grid-template-columns: 1fr;
+    }
+
+    #galleryImages img {
+        max-width: 100%;
+    }
+
+    #galleryImages figcaption {
+        font-size: 3vw;
+    }
+
+    .form-section {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    table th {
+        min-width: 52px;
+        background-color: #d8d8d8;
+        height: 30px;
+        font-size: 9.5px;
+    }
+
+    table td {
+        padding: 15px 5px;
+        border: 1px dotted #d8d8d8;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    /*I know this is a grim way to do this but I am experimenting*/
+    .about-page {
+        height: 222vh;
+    }   
+
+    .about {
+        position: relative;        
+        display: grid;
+        padding-top: 0;
+        justify-content: center;
+    }
+
+    .about1, .about2, .about3 {
+        width: 85vw;
+        top: 0;
+        margin-left: 7.5vw;
+        position: absolute;
+    }
+
+    #oneone {
+    padding-top: 0;
+    }
+
+    #onetwo {
+    padding-top: 20vh;
+    }
+
+    #onethree {
+    padding-top: 30vh;
+    }
+
+    #twoone {
+    padding-top: 30vh;
+    }
+
+    #twotwo {
+    padding-top: 60vh;
+    }
+
+    #twothree {
+    padding-top: 31vh;
+    }
+
+    #threeone {
+    padding-top: 28vh;
+    }
+
+    #threetwo {
+    padding-top: 56vh;
+    }
+
+    #threethree {
+    padding-top: 33vh;
+    padding-bottom: 12vh;
+    }
+
+    .banner {
+        position: sticky;
+        bottom: 0;
+        background-color:  rgba(236, 199, 143, 0.96);
+        align-self: flex-end;
+    }
+
+    nav {
+        width: 100vw;
+    }
+    nav a {
+        font-size: 2vh;
+    }
+    nav a:hover {
+        color: rgb(94, 66, 51);
+        font-size: 2.5vh;
+        border-bottom: 2px solid rgb(165, 106, 71);
+    }
+}
 
 /*Animations*/
 
@@ -311,5 +748,28 @@ button::after, button::after {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes xPulse {
+    0% {
+        background-size: 75% 100%;
+    }
+    50% {
+        background-size: 27.5% 50%;
+    }
+    100% {
+        background-size: 75% 100%;
+    }
+}
+
+@keyframes banner-appear {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

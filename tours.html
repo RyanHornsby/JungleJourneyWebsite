@@ -2,24 +2,78 @@
 <html>
 <head>
     <title>Jungle Journey - Tours</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta charset="UTF-8">
+        <meta name="description" content="Tours page for Joungle Journey holiday getaways">
+        <meta name="keywords" content="Jungle, Journey, Jungle Journey, Getaway, Tours, Booking, Holiday, Travel, Escape, Relaxing">
+        <meta name="author" content="Ryan Hornsby">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-
     <!-- Navigation -->
      
     <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="tours.html">Tours</a></li>
+            <li id="extra"><a href="tours.html">Tours</a>
+                <div id="hidden">
+                    <div id="blankFiller">
+
+                    </div>
+                    <div class = "secondNav">
+                        <ul>
+                            <li id="secondNav1"><a href=#ideaSeller>Weekend Getaways</a></li>
+                            <li id="secondNav2"><a href=#ideaSeller>Week Getaways</a></li>
+                            <li id="secondNav3"><a href=#ideaSeller>Long-term Sojourn</a></li>
+                        </ul>
+                    </div>
+                </div>                
+            </li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact-us.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>Welcome to the Tours page!</h1>
 
+    <!--The main booking area-->
+
+    <main class="tours-page">
+    <h1>Book a trip!</h1>
+    <div class="table-section">
+        <table>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+            <tr>
+                <td class="noDate leftTableColumn"></td><td class="noDate topTableRow"></td><td class="noDate topTableRow"></td><td class="booked topTableRow">1</td><td class="booked topTableRow">2</td><td class="booked topTableRow">3</td><td class="booked rightTableColumn topTableRow">4</td>
+            </tr>
+            <tr>
+                <td class = "leftTableColumn">5</td><td>6</td><td>7</td><td class="booked">8</td><td class="booked">9</td><td>10</td><td class="booked rightTableColumn">11</td>
+            </tr>
+            <tr>
+                <td class = "leftTableColumn">12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td class = "rightTableColumn">18</td>
+            </tr>
+            <tr>
+                <td class = "leftTableColumn">19</td><td class="booked">20</td><td>21</td><td>22</td><td class="booked">23</td><td class="booked">24</td><td class = "rightTableColumn">25</td>
+            </tr>
+            <tr>
+                <td class = "leftTableColumn bottomTableRow">26</td><td class="bottomTableRow">27</td><td class="booked bottomTableRow">28</td><td class="booked bottomTableRow">29</td><td class="booked bottomTableRow">30</td><td class="booked bottomTableRow">31</td><td class="noDate rightTableColumn bottomTableRow"></td>
+            </tr>
+        </table>
+    </div>
+    <form class="calendarInput">
+        <h2>Select the duration of your trip</h2>
+        <!--With JS you can probably set the endDate to only accept an input from the day after the startDate-->
+        <input type="date" id="startDate" name="startDate">
+        <input type="date" id="startDate" name="endDate"><br><br><br>
+        <input type="submit" id="tourBookButton" name="tourBookButton" value="Secure your adventure!">
+    </form>
+    </main>
      <!--Footer-->
 
      <footer>
@@ -41,6 +95,5 @@
             </p>
         </div>
     </footer>
-
 </body>
 </html>

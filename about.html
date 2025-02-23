@@ -2,8 +2,13 @@
 <html>
 <head>
     <title>Jungle Journey - About</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta charset="UTF-8">
+        <meta name="description" content="Homepage For Joungle Journey holiday getaways">
+        <meta name="keywords" content="Jungle, Journey, Joungle Journey, Getaway, Holiday, Travel, Escape, Relaxing">
+        <meta name="author" content="Ryan Hornsby">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -12,13 +17,103 @@
     <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="tours.html">Tours</a></li>
+            <li id="extra"><a href="tours.html">Tours</a>
+                <div id="hidden">
+                    <div id="blankFiller">
+
+                    </div>
+                    <div class = "secondNav">
+                        <ul>
+                            <li id="secondNav1"><a href=#ideaSeller>Weekend Getaways</a></li>
+                            <li id="secondNav2"><a href=#ideaSeller>Week Getaways</a></li>
+                            <li id="secondNav3"><a href=#ideaSeller>Long-term Sojourn</a></li>
+                        </ul>
+                    </div>
+                </div>                
+            </li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact-us.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>Welcome to the About page!</h1>
+
+    <!--I know this would be much nicer with using display:grid, but I am experimenting with different techniques-->
+    <main class="about-page">
+    <header class="about">
+        <div class="about1">
+            <div id="oneone">
+                <img src="Images/CEO.jpg" alt="Photo of our CEO">
+                <p><i>Ben Hedgeworth, our CEO</i></p>
+            </div>
+            <br><br><br><br><br><br>
+            <div id="twotwo">
+                <p><b>Favourite video game:</b><br>
+                    <i>Omori</i>
+                </p>
+            </div>
+            <br><br><br><br><br><br>
+            <div id="threeone">
+                <img src="Images/native.jpg" alt="Photo of our native worker">
+                <p><i>OO'kala Ümb'aa'la, native expert</i></p>
+            </div>
+        </div>
+        <div class="about2">
+            <div id="onethree">
+                <div class="quotes">
+                    <q>Our mission has always been about providing people with the opportunity to revisit their origins. Modern life with all of its hustles and bustles
+                        can be overwhelming for many. Sometimes, we just need a reset. And this trip can provide that for you.<br><br>
+
+                        Working out in the jungle, crafting huts with only the same tools as our ancestors, we truly believe we are able to provide our guests with the
+                        most authentic, primordial experience they'll ever have.
+                    </q>
+                </div>
+            </div>
+            <br><br><br>
+            <div id="twothree">
+                <div class="quotes">
+                    <q>I grew up out here. My family moved to the big city when I was a kid, hoping for better opportunities, looking to give me a better life.<br><br>
+                    
+                        I'll forever be grateful for them for that - but no place I've ever visited as felt more like home than these jungles. Now I have the opportunity to
+                        show others just how serene life can be when you slow it all down.
+                    </q>
+                </div>
+            </div>
+            <br><br><br>
+            <div id="threethree">
+                <div class="quotes">
+                    <q>This is my home.<br><br>
+                        I am grateful to show people how we have lived for our lives.<br><br>
+                        My family keep the knowledge that people have forgotten. Now I share it with you.<br><br>
+                        One day maybe you teach people too.
+                    </q>
+                </div>
+            </div>
+        </div>
+        <div class="about3">
+            <br>
+            <div id="onetwo">
+                <p><b>Favourite drink:</b><br>
+                <i>Monster Energy - Paradise Punch</i>
+                </p>
+            </div>
+            <br><br><br><br><br><br>
+            <div id="twoone">
+                <img src="Images/Researcher.jpg" alt="Photo of our Field Researcher">
+                <p><i>Thomas Duckleberry, our Field Researcher</i></p>
+            </div>
+            <br><br><br><br><br>
+            <div id="threetwo">
+                <p><b>Favourite food:</b><br>
+                <i>Bangers and Mash</i>
+            </div>
+            <br><br><br>
+            </p>
+        </div>
+    </header>
+    <div class="banner">
+        <a href="tours.html"><button class="shrink-border">Book an escape now!</button></a>
+    </div>
+    </main>
 
      <!--Footer-->
 
@@ -41,6 +136,5 @@
             </p>
         </div>
     </footer>
-
 </body>
 </html>

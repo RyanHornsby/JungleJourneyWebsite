@@ -2,6 +2,11 @@
 <html>
 <head>
     <title>Jungle Journey - Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gallery page for Jungle Journey holiday getaways">
+    <meta name="keywords" content="Jungle, Journey, Jungle Journey, Pictures, Reviews, Experience">
+    <meta name="author" content="Ryan Hornsby">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -12,13 +17,65 @@
     <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="tours.html">Tours</a></li>
+            <li id="extra"><a href="tours.html">Tours</a>
+                <div id="hidden">
+                    <div id="blankFiller">
+
+                    </div>
+                    <div class = "secondNav">
+                        <ul>
+                            <li id="secondNav1"><a href=#ideaSeller>Weekend Getaways</a></li>
+                            <li id="secondNav2"><a href=#ideaSeller>Week Getaways</a></li>
+                            <li id="secondNav3"><a href=#ideaSeller>Long-term Sojourn</a></li>
+                        </ul>
+                    </div>
+                </div>                
+            </li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact-us.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>Welcome to the Gallery page!</h1>
+
+    <main class="gallery-page">
+    <h1>The paradise that's waiting for you.</h1>
+
+    <!--Images section-->
+    <div class="gallery-container">
+        <h2>Photos from people who have stayed here:</h2>
+        <div id="galleryImages">
+            <figure>
+                <img src="Images/gallery1.jpg" alt="A beautiful vista of the surrounding river.">
+                <figcaption>A beautiful vista of the surrounding river.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Images/gallery2.jpg" alt="A toucan sits perched among the branches of a tree.">
+                <figcaption>A toucan sits perched among the branches of a tree.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Images/gallery3.jpg" alt="A picturesque glance of a light-dappled river.">
+                <figcaption>A picturesque glance of a light-dappled river.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Images/gallery4.jpg" alt="An enchanting forest trail beckons.">
+                <figcaption>An enchanting forest trail beckons.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Images/gallery5.jpg" alt="A deep, mysterious shot of the verdant jungle in the early morning.">
+                <figcaption>A deep, mysterious shot of the verdant jungle in the early morning.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="Images/gallery6.jpg" alt="Looking through the ruins of a civilisation long since lost to the echoes of time.">
+                <figcaption>Looking through the ruins of a civilisation long since lost to the echoes of time.</figcaption>
+            </figure>
+        </div>
+    </div>
+    </main>
 
      <!--Footer-->
 
